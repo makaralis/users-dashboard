@@ -1,3 +1,6 @@
+$breakpoint-mobile: 480px;
+
+
 .graph-wrapper {
     border-radius: 4px;
     background-color: #c5eaed;
@@ -8,6 +11,11 @@
     align-items: center;
     min-height: 50px;
     width: 100%;
+    @media (max-width: $breakpoint-mobile) {
+        width: 90%;
+        margin:  8px 0 8px 0;
+        padding: 8px 0 8px 0;
+    }
 }
 
 .column-wrapper {
