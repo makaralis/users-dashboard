@@ -5,11 +5,15 @@
     border-radius: 4px;
     width: 100%;
     height: 40px;
-    padding: 8px 10px 8px 5px;
+    padding: 8px 15px 8px 5px;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
+}
+
+.notification {
+    margin: 0px 13px 0px 13px;
 }
 
 .logo {
