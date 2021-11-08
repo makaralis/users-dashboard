@@ -1,0 +1,23 @@
+.graph-wrapper {
+    border-radius: 4px;
+    background-color: #c5eaed;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    width: 100%;
+}
+
+.column-wrapper {
+    height: 60px;
+    width: 90%;
+    display: flex; 
+    align-items: flex-end;
+    margin: 0 12px 0 12px;
+}
+
+.column {
+    width: 100%;
+}
