@@ -1,0 +1,36 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+
+.wrapper {
+    background-color: white;
+    border-radius: 4px; 
+    @media (max-width: $breakpoint-mobile) {
+        width: 100%;
+        margin:  8px 0 8px 0;
+        padding: 8px 0 8px 0;
+    }
+    @media (min-width: $breakpoint-mobile) {
+        width: 38%;
+        margin:  8px 3% 8px 3%;
+        padding: 8px 3% 8px 3%;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        width: 17%;
+        margin:  8px 2% 8px 2%;
+        padding: 8px 2% 8px 2%;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.subTitle {
+    font-size: medium;
+}

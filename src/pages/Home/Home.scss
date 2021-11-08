@@ -1,5 +1,23 @@
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
 
-.wrapper {
+.main-wrapper {
     overflow-x: hidden;
-    padding: 10px 30px 20px 20px;
+    padding: 20px;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @media (min-width: $breakpoint-mobile) {
+        width: 106%;
+        margin-left: -3%;
+    }
+    @media (min-width: $breakpoint-tablet) {
+        width: 104%;
+        margin-left: -2%;
+    }
 }
