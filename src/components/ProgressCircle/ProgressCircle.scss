@@ -1,0 +1,65 @@
+$breakpoint-mobile: 480px;
+
+.progress-wrapper {
+    border-radius: 4px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+    width: 100%;
+    @media (max-width: $breakpoint-mobile) {
+        width: 90%;
+        margin:  8px 0 8px 0;
+        padding: 8px 0 8px 0;
+    }
+}
+
+.item {
+	margin: 4px 0;
+	position: relative;
+	width: 54px;
+	height: 54px;
+	border-radius: 50%;
+	border: 1px solid #fff;
+	background-color: #FFF;
+    float: left;
+}
+
+.radial-inner-bg {
+	border-radius: 50%;
+	width: 38px;
+	height: 38px; 
+	top: 8px;
+	left: 8px;
+	position: absolute;
+}
+
+.progress-value {
+    display: flex;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    line-height: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-weight: 300;
+}
+
+$step: 1; 
+$loops: 100;
+$increment: (360 / $loops);
+$half: round($loops / 2);
+@for $i from 0 through $loops {
+  .progress-#{$i*$step} {
+    @if $i < 50 {
+		$nextdeg: 90deg + ( $increment * $i );
+		background-image: linear-gradient(90deg, #fff 50%, transparent 50%, transparent), linear-gradient($nextdeg,#465855 50%, #fff 50%, #fff);
+    }
+    @else {
+		$nextdeg: -90deg + ( $increment * ( $i - $half ) );
+		background-image: linear-gradient($nextdeg,#5f3566 50%, transparent 50%, transparent), linear-gradient(270deg,#5f3566 50%, #fff 50%, #fff);
+    }
+  }
+}
