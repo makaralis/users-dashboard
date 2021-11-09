@@ -1,5 +1,7 @@
 $background: white;
 $lfs-grey: #75787b;
+$breakpoint-tablet: 768px;
+
 
 .table-wrapper {
     background-color: $background;
@@ -7,12 +9,19 @@ $lfs-grey: #75787b;
     margin-top: 50px;
     border-radius: 4px;
     width: 70%;
+    @media (max-width: $breakpoint-tablet) {
+        width: 88%;
+    }
 }
 
 .panel-heading {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+}
+
+.panel-body {
+    overflow-x:auto;
 }
 
 .table-latitude {
