@@ -1,0 +1,19 @@
+
+
+.status-card-active {
+    border: 1px solid green;
+    color: green;
+    background-color: #e6f3e9;
+    border-radius: 8px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.status-card-in-review {
+    border: 1px solid red;
+    color: red;
+    background-color: #efe2e2;
+    border-radius: 8px;
+    padding: 5px 10px;
+    text-align: center;
+}

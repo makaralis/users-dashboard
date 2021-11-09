@@ -1,4 +1,5 @@
 import './Table.scss';
+import StatusCard from '../StatusCard';
 
 const Table = ({tableTitle, theads, data}) => {
     return (
@@ -18,7 +19,9 @@ const Table = ({tableTitle, theads, data}) => {
                                     {data.map((row, index) =>  {
                                         return (
                                             <tr key={index}>
-                                                {row.map((rowData) => <td key={rowData}>{rowData}</td>)}
+                                                {row.map((rowData) => <td key={rowData}>
+                                                    {rowData === "Active" ? <StatusCard status='active'/> : rowData === 'In Review' ? <StatusCard status='in-review'/> : rowData}
+                                                </td>)}
                                             </tr>
                                         )    
                                         })}
