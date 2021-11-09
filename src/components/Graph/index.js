@@ -1,23 +1,14 @@
 import React from 'react';
 import './Graph.scss';
 
+const columnsHeightData = ['50%', '30%', '60%', '80%'];
  
 const Graph = ({color}) => {
     return (
         <div className="graph-wrapper">
             <div className="column-wrapper">
-                <div className="column" style={{ height: '50%', backgroundColor: color}}/>
-            </div>
-            <div className="column-wrapper">
-                <div className="column" style={{ height: '30%',  backgroundColor: color}}/>
-            </div>
-            <div className="column-wrapper">
-                <div className="column" style={{ height: '60%',  backgroundColor: color}}/>
-            </div>
-            <div className="column-wrapper">
-                <div className="column" style={{ height: '80%',  backgroundColor: color}}/>
-            </div>
-          
+                {columnsHeightData.map((height) =>  <div key={height} className="column" style={{ height: height, backgroundColor: color}}/>)}
+            </div>          
         </div>
     )
 }
