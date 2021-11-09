@@ -1,6 +1,5 @@
 # Welcome to Users Dashboard App
 
-deployment link: https://users-dashboard-demo.netlify.app/
 
 Technologies I used:
 
